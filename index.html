@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <title>Mapa Comunas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="container">
+    <h1>Comunas Neiva-Huila</h1>
+    <div class="image1-container">
+        <div class="image1"><img src="Comunas_Neiva.jpg" alt="imagen 1"></div>
+    </div>
+    <div class="image-container">
+        
+        <div class="image2"><img src="Comuna2.png" alt="imagen 2" width="67%" ></div>
+    </div>
+    <div class="popup-image">
+        <span> &times; </span>
+        <h1>Comuna 2</h1>
+
+        <div class="img-container">
+            <img src="Comuna2.png" alt="">
+        </div>
+        <div class="info-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Barrios</th>
+                        <th>Habitantes</th>
+                        <th>#Hombres</th>
+                        <th>#Mujeres</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aeropuerto Benito Salas</td>
+                        <td>361</td>
+                        <td>178</td>
+                        <td>183</td>
+                        <td><button class="boton1" onclick="abrirPestana()">Ver Mas</button></td>
+                    </tr>
+                    <tr>
+                        <td>El Cortijo</td>
+                        <td>1291</td>
+                        <td>609</td>
+                        <td>682</td>
+                        <td><button class="boton1" onclick="abrirPestana2()">Ver Mas</button></td>
+                    </tr>
+                    <tr>
+                        <td>Las Granjas</td>
+                        <td>361</td>
+                        <td>178</td>
+                        <td>183</td>
+                        <td><button class="boton1" onclick="abrirPestana()">Ver Mas</button></td>
+                    </tr>
+                    <tr>
+                        <td>Aeropuerto</td>
+                        <td>361</td>
+                        <td>178</td>
+                        <td>183</td>
+                        <td><button class="boton1" onclick="abrirPestana()">Ver Mas</button></td>
+                    </tr>
+                    <tr>
+                        <td>Los Cambulos</td>
+                        <td>361</td>
+                        <td>178</td>
+                        <td>183</td>
+                        <td><button class="boton1" onclick="abrirPestana()">Ver Mas</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gualanday</td>
+                        <td>361</td>
+                        <td>178</td>
+                        <td>183</td>
+                        <td><button class="boton1" onclick="abrirPestana()">Ver Mas</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.image-container img').forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+});
+
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+}
+
+function abrirPestana2() {
+  window.open("https://juansd1.github.io/barrio-neiva/", "_blank");
+}
+</script>
+
+</body>
+</html>
